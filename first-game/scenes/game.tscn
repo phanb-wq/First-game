@@ -1,10 +1,27 @@
 [gd_scene format=3 uid="uid://cva6l4maxlxyl"]
 
 [ext_resource type="PackedScene" uid="uid://cyriia68bf6jm" path="res://scenes/level_1.tscn" id="1_yqjtg"]
-[ext_resource type="PackedScene" uid="uid://g7k0dw4hf3pb" path="res://test/test_player.tscn" id="2_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://dqp8s3o48heej" path="res://scenes/character.tscn" id="2_yqjtg"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h85l4"]
+distance = -370.0
 
 [node name="Game" type="Node2D" unique_id=1125667878]
 
 [node name="Level 1" parent="." unique_id=2106148735 instance=ExtResource("1_yqjtg")]
 
-[node name="Test_Player" parent="." unique_id=450016100 instance=ExtResource("2_lnu2h")]
+[node name="Bottom Boundery" type="StaticBody2D" parent="." unique_id=75386820]
+position = Vector2(427, 84)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom Boundery" unique_id=2080485919]
+shape = SubResource("WorldBoundaryShape2D_h85l4")
+
+[node name="Left Boundery" type="StaticBody2D" parent="." unique_id=1737361184]
+position = Vector2(686, 370.00003)
+rotation = 1.5566707
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left Boundery" unique_id=1098858910]
+shape = SubResource("WorldBoundaryShape2D_h85l4")
+
+[node name="Character" parent="." unique_id=251279754 instance=ExtResource("2_yqjtg")]
+position = Vector2(369, 379)
