@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://hlclfoosa5ks" path="res://assets/sprites/world_tileset.png" id="1_014kd"]
 [ext_resource type="PackedScene" uid="uid://cjlvisjdn7olq" path="res://platform.tscn" id="2_bswci"]
 [ext_resource type="Texture2D" uid="uid://cm3rf6t67jr8" path="res://assets/sprites/platforms.png" id="3_rus8k"]
+[ext_resource type="PackedScene" uid="uid://dytd7pekeiu2j" path="res://coin.tscn" id="4_5xbjy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bswci"]
 texture = ExtResource("1_014kd")
@@ -219,3 +220,6 @@ position = Vector2(621, 224)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Platform 2" unique_id=1937615694]
 libraries/ = SubResource("AnimationLibrary_4nkto")
 autoplay = &"move"
+
+[node name="Coin" parent="." unique_id=950953940 instance=ExtResource("4_5xbjy")]
+position = Vector2(562, 341)
