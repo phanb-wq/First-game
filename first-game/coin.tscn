@@ -2,6 +2,24 @@
 
 [ext_resource type="Texture2D" uid="uid://cjbdxkwp8iiq3" path="res://assets/sprites/coin.png" id="1_d5gmh"]
 
+[sub_resource type="GDScript" id="GDScript_h85l4"]
+script/source = "extends Area2D
+
+# Points awarded when collecting this coin
+@export var score_value: int = 1
+
+func _on_body_entered(body: Node2D) -> void:
+	# Check if the colliding body is character
+	if body.name == \"character\":
+		# Add score to character if it has a 'score' variable
+		if \"score\" in body:
+			body.score += score_value
+			print(\"Current Score: \", body.score)
+		
+		# Remove the coin from the scene
+		queue_free()
+"
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_0t63x"]
 atlas = ExtResource("1_d5gmh")
 region = Rect2(0, 0, 16, 16)
@@ -98,6 +116,7 @@ animations = [{
 radius = 5.0
 
 [node name="Coin" type="Area2D" unique_id=950953940]
+script = SubResource("GDScript_h85l4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=502027260]
 sprite_frames = SubResource("SpriteFrames_6qpsl")
