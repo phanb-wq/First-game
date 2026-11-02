@@ -9,7 +9,7 @@ size = Vector2(50, 6.5)
 position = Vector2(1062, 4)
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=462895727]
-position = Vector2(49, -28)
+position = Vector2(29, -32)
 texture = ExtResource("1_mi635")
 region_enabled = true
 region_rect = Rect2(0, 48, 48, 8)
@@ -18,3 +18,4 @@ metadata/_edit_group_ = true
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D" unique_id=1635923611]
 position = Vector2(-1, -0.25)
 shape = SubResource("RectangleShape2D_h85l4")
+disabled = true

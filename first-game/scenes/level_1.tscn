@@ -221,14 +221,28 @@ position = Vector2(621, 224)
 libraries/ = SubResource("AnimationLibrary_4nkto")
 autoplay = &"move"
 
-[node name="Coin" parent="." unique_id=950953940 instance=ExtResource("4_5xbjy")]
+[node name="Platform2" parent="." unique_id=840962098 instance=ExtResource("2_bswci")]
+position = Vector2(1551, 317)
+
+[node name="Platform3" parent="." unique_id=518750337 instance=ExtResource("2_bswci")]
+position = Vector2(672, 402)
+
+[node name="Coin" type="Node" parent="." unique_id=1792884985]
+
+[node name="Coin5" parent="Coin" unique_id=477358019 instance=ExtResource("4_5xbjy")]
+position = Vector2(628, 374)
+
+[node name="Coin" parent="Coin" unique_id=950953940 instance=ExtResource("4_5xbjy")]
 position = Vector2(562, 341)
 
-[node name="Coin2" parent="." unique_id=69802280 instance=ExtResource("4_5xbjy")]
-position = Vector2(367, 344)
+[node name="Coin6" parent="Coin" unique_id=1349065329 instance=ExtResource("4_5xbjy")]
+position = Vector2(522, 340)
 
-[node name="Coin3" parent="." unique_id=901520925 instance=ExtResource("4_5xbjy")]
+[node name="Coin4" parent="Coin" unique_id=1013351254 instance=ExtResource("4_5xbjy")]
+position = Vector2(549, 245)
+
+[node name="Coin3" parent="Coin" unique_id=901520925 instance=ExtResource("4_5xbjy")]
 position = Vector2(423, 287)
 
-[node name="Coin4" parent="." unique_id=1013351254 instance=ExtResource("4_5xbjy")]
-position = Vector2(549, 245)
+[node name="Coin2" parent="Coin" unique_id=69802280 instance=ExtResource("4_5xbjy")]
+position = Vector2(367, 344)

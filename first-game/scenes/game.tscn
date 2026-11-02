@@ -2,6 +2,8 @@
 
 [ext_resource type="PackedScene" uid="uid://cyriia68bf6jm" path="res://scenes/level_1.tscn" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://dqp8s3o48heej" path="res://scenes/character.tscn" id="2_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://b64m5p1ktpmj1" path="res://killzone.tscn" id="3_lnu2h"]
+[ext_resource type="PackedScene" uid="uid://kvmeht4fd4eh" path="res://slime.tscn" id="4_lbhrr"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h85l4"]
 distance = -370.0
@@ -10,18 +12,25 @@ distance = -370.0
 
 [node name="Level 1" parent="." unique_id=2106148735 instance=ExtResource("1_yqjtg")]
 
-[node name="Bottom Boundery" type="StaticBody2D" parent="." unique_id=75386820]
-position = Vector2(427, 84)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bottom Boundery" unique_id=2080485919]
-shape = SubResource("WorldBoundaryShape2D_h85l4")
-
 [node name="Left Boundery" type="StaticBody2D" parent="." unique_id=1737361184]
 position = Vector2(686, 370.00003)
 rotation = 1.5566707
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left Boundery" unique_id=1098858910]
+position = Vector2(-9.776019, 54.86739)
 shape = SubResource("WorldBoundaryShape2D_h85l4")
 
 [node name="Character" parent="." unique_id=251279754 instance=ExtResource("2_yqjtg")]
-position = Vector2(369, 379)
+position = Vector2(314, 365.00003)
+
+[node name="Killzone" parent="." unique_id=1767301564 instance=ExtResource("3_lnu2h")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=2080485919]
+position = Vector2(427, 84)
+shape = SubResource("WorldBoundaryShape2D_h85l4")
+
+[node name="Slime" parent="." unique_id=1608854463 instance=ExtResource("4_lbhrr")]
+position = Vector2(515, 239)
+
+[node name="Slime2" parent="." unique_id=792420612 instance=ExtResource("4_lbhrr")]
+position = Vector2(544, 338)

@@ -240,6 +240,7 @@ height = 20.0
 
 [node name="Character" type="CharacterBody2D" unique_id=251279754]
 rotation = -0.0025716957
+collision_layer = 2
 script = SubResource("GDScript_lnu2h")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=713012707]
