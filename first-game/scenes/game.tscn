@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dqp8s3o48heej" path="res://scenes/character.tscn" id="2_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://b64m5p1ktpmj1" path="res://killzone.tscn" id="3_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://kvmeht4fd4eh" path="res://slime.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://bev42pp6as4oi" path="res://hud.tscn" id="5_iywne"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_h85l4"]
 distance = -370.0
@@ -34,3 +35,11 @@ position = Vector2(515, 239)
 
 [node name="Slime2" parent="." unique_id=792420612 instance=ExtResource("4_lbhrr")]
 position = Vector2(544, 338)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1315112948]
+
+[node name="HUD" parent="CanvasLayer" unique_id=633359871 instance=ExtResource("5_iywne")]
+offset_left = -3.0
+offset_top = -10.0
+offset_right = -3.0
+offset_bottom = -10.0

@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://bev42pp6as4oi"]
+
+[ext_resource type="Texture2D" uid="uid://cjbdxkwp8iiq3" path="res://assets/sprites/coin.png" id="1_37p78"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rakp"]
+atlas = ExtResource("1_37p78")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="FontVariation" id="FontVariation_4rakp"]
+
+[node name="HUD" type="Control" unique_id=633359871]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -32.0
+offset_top = -25.0
+offset_right = -32.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CoinTexture" type="TextureRect" parent="." unique_id=726348167]
+layout_mode = 0
+offset_left = 40.0
+offset_top = 29.0
+offset_right = 80.0
+offset_bottom = 69.0
+texture = SubResource("AtlasTexture_4rakp")
+
+[node name="Label" type="Label" parent="CoinTexture" unique_id=1054662086]
+layout_mode = 0
+offset_left = 16.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 31.0
+theme_override_colors/font_color = Color(0.012617188, 0.012617188, 0.012617188, 1)
+theme_override_fonts/font = SubResource("FontVariation_4rakp")
+text = "0"
